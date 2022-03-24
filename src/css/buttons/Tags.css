@@ -1,0 +1,55 @@
+.Tags {
+    height: 48px;
+    border-radius: 24px;
+    -webkit-backdrop-filter: blur(25.8px);
+  backdrop-filter: blur(25.8px);
+      background-color: rgba(255, 255, 255, 0.2);
+
+  position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.Tags a {
+    color: white;
+}
+
+.tags-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    -webkit-backdrop-filter: blur(4.5px);
+  backdrop-filter: blur(4.5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white !important;
+
+}
+
+.Tags:hover {
+  background-color: #6000de70;
+}
+
+.Tags:hover .tags-circle{
+  background-color: var(--primary-blue);
+}
+
+.tag-active {
+  background-color: var(--primary-blue);
+}

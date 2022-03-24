@@ -1,0 +1,114 @@
+.BannerTop {
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-blue);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.BannerTop .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.BannerTop .close-icon:hover {
+    opacity: 1;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+}
+
+.banner-container a {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background-color: var(--base-1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    transition: 0.2s all ease-in;
+}
+
+
+.banner-container a:hover {
+    background-color: #C70039;
+
+}
+.banner-container a:active {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6) inset;
+
+}
+
+.banner-information {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.banner-information h1 {
+    font-size: 24px;
+}
+
+@media (max-width: 860px) {
+        .banner-information h1 {
+        font-size: 16px;
+    }
+
+    .banner-information p {
+        font-size: 12px;
+    }
+
+    .banner-container a {
+        width: 150px;
+        height: 40px;
+    }
+}
+
+@media (max-width:460px) {
+    .BannerTop {
+        height: 120px;
+    }
+    .banner-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .banner-information {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 0;
+    }
+    .banner-information img{
+        display: none;
+    }
+    .banner-information h1 {
+        font-size: 20px;
+    }
+
+    .banner-information p {
+        font-size: 14px;
+    }
+
+    .banner-container a {
+        /* width: 200px; */
+        height: 30px;
+    }
+}

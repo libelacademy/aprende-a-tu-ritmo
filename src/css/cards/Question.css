@@ -1,0 +1,126 @@
+.Question {
+     width: 600px;
+height: auto;
+border-bottom: 1px solid var(--line);
+/* margin: 10px 0px; */
+    transition: height 0.3s ease-in;
+
+}
+
+.question-header {
+    color: var(--base-1);
+    font-size: 16px;
+    font-weight: 500;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    /* transition: all 0.3s ease-in; */
+}
+
+.question-header-active {
+    font-size: 16px;
+    font-weight: 500;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* transition: all 0.3s ease-in; */
+    background-color: var(--primary-blue);
+        border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+}
+
+.question-header p {
+    width: 85%;
+    /* transition: all 0.3s ease-in; */
+
+}
+
+.question-header-active p {
+    width: 85%;
+    /* transition: all 0.3s ease-in; */
+
+}
+
+.question-body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--base-3);
+    padding: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in;
+}
+
+
+@media (max-width:1024px) {
+    .Question {
+        width: 450px;
+        
+    }
+        .question-header {
+        color: var(--base-1);
+        font-size: 12px;
+        height: 55px;
+    }
+    
+            .question-header-active {
+        font-size: 12px;
+        height: 55px;
+    }
+
+.question-body {
+    font-size: 12px;
+}
+}
+
+
+
+@media (max-width:860px) {
+    .Question {
+        width: 600px;
+    }
+    
+}
+
+@media (max-width: 460px) {
+    .Question {
+        width:370px;
+    }
+
+    .question-header {
+        color: var(--base-1);
+        font-size: 14px;
+        height: 80px;
+        padding-bottom: 10px;
+    }
+        .question-header-active {
+        font-size: 14px;
+        height: 80px;
+        padding-bottom: 10px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    .Question {
+        width: 310px;
+    }
+
+    .question-header {
+        font-size: 12px;
+    }
+
+    .question-body {
+        font-size: 10px;
+    }
+}

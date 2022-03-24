@@ -1,0 +1,111 @@
+.Video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        transition: all 0.5s ease-in;
+
+}
+
+.go-to-master {
+    margin-top: 40px;
+    width: 200px;
+    height: 48px;
+    background-color: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.video-closer {
+    border: none;
+    background-color: var(--primary-blue);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+}
+
+.video-closer:hover {
+    background-color: var(--base-3);
+}
+
+.video-content {
+    position: relative;
+    transition: all 0.5s ease-in;
+
+    transform: translateY(0%) scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    width: 768px;
+    height: 432px;
+    background: black;
+    border-radius: 20px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+    position: relative;
+    transition: all 0.5s ease-in;
+    transform: translateY(0%) scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-closed {
+    transform: translateY(200%) scale(0.2);
+    box-shadow: 0 0 4px #8a31ffcc;
+}
+
+@media (max-width: 1024px) {
+    .video-container {
+        width: 768px;
+        height: 432px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 512px;
+        height: 288px;
+    }
+}
+
+@media (max-width: 425px) {
+    .video-container {
+        width: 384px;
+        height: 216px;
+    }
+}
+
+@media (max-width: 375px) {
+    .video-container {
+        width: 256px;
+        height: 144px;
+    }
+}

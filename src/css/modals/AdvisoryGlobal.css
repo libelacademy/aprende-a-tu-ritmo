@@ -1,0 +1,113 @@
+.AdvisoryGlobal {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: calc(50% - 350px);
+    width: 700px;
+    height: auto;
+    background-color: var(--primary-blue);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    transition: 1s all ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 10px 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ag-closer {
+    width:20px;
+    height: 20px;
+    font-size: 24px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    background-color: var(--base-3);
+}
+
+.ag-closer:hover {
+    color: var(--primary-blue);
+}
+
+.AdvisoryGlobal h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.AdvisoryGlobal a {
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    border: 2px solid var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+.ag-icon{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.AdvisoryGlobal a:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width:460px) {
+    .AdvisoryGlobal {
+        width: 100%;
+    right: 0;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .AdvisoryGlobal h1 { 
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .AdvisoryGlobal a {
+    width:130px;
+    height: 36px;
+    border-radius: 18px;
+    border: 2px solid var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in;
+    font-size: 12px !important;
+}
+
+.ag-icon{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.ag-closer { 
+    top: 5px;
+    right: 5px;
+}
+}
+
+
+@media (max-width:320px) {
+    .ag-closer { 
+    top: 0px;
+    right: 0px;
+}
+}
+
+
+

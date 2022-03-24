@@ -1,0 +1,87 @@
+/** @format */
+
+.InformativeTalks {
+  border: none;
+  width: 650px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: 0.5s all ease-in;
+  background-color: #6000de;
+  position: fixed;
+  bottom: 0;
+  left: calc(50% - 325px);
+  z-index: 1000;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 10px 10px 4px rgba(0, 0, 0, 0.18);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 10px 10px 4px rgba(0, 0, 0, 0.18);
+
+}
+
+.InformativeTalks  a {
+  height: 36px;
+  border-radius: 18px;
+  border: 2px solid var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in;
+  padding: 8px 12px;
+}
+
+.it-icon{
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+
+.InformativeTalks a:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.close-information {
+  border: none;
+  background-color: var(--base-3);
+  width: 20px;
+  height:20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 18px;
+  cursor: pointer;
+  color: white; 
+  position: absolute;
+  top: -5px;
+  right: -5px; 
+}
+
+.close-information:hover {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 460px) {
+.InformativeTalks {
+  width: 100%;
+  height: 76px;
+  left: 0;
+  bottom: 0;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.InformativeTalks p {
+  display: none;
+}
+  
+}

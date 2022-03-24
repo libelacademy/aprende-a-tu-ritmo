@@ -1,0 +1,229 @@
+
+.Footer {
+    width: 100%;
+    height: 600px;
+    display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1.7fr 0.3fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "footer-content"
+    "footer"; 
+    background-color: var(--base-1);
+}
+
+.footer-content {
+    grid-area: footer-content;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer-content-container {
+display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "footer-shortcuts footer-contact";
+}
+
+.footer-shortcuts {
+    grid-area: footer-shortcuts;
+    width: 50%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-list li {
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--white);
+    margin: 10px 0px;
+}
+
+.footer-list-li {
+text-transform: uppercase;
+    list-style: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--white);
+    margin: 10px 0px;
+}
+
+.footer-list a {
+    color: var(--white);
+text-decoration: none;
+}
+
+.footer-list a:hover, .footer-list li:hover {
+    color: var(--primary-blue);
+}
+
+.footer-contact {
+    grid-area: footer-contact;
+    width: 50%;
+    justify-self: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-logo {
+    margin-bottom: 60px;
+}
+
+.footer-contact  h4 {
+    font-size: 22px;
+}
+
+.help {
+    font-size: 16px;
+}
+
+.help a {
+    font-size: 16px;
+    color: var(--white);
+}
+
+.help a:hover {
+    color: var(--primary-blue);
+}
+
+.social-networks {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+
+}
+
+.social-networks img {
+    width: 25px;
+    margin-right: 15px;
+    transition: 0.2s transforme ease-in;
+        
+}
+
+.social-networks img:hover {
+    transform: scale(1.3);
+}
+
+/* ############################################## */
+.footer {
+    grid-area: footer; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .terms {
+    color: var(--base-3);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer .copyright {
+    color: var(--base-2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.footer .privacy-policy{
+    color: var(--base-2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.terms:hover, .privacy-policy:hover {
+    color: var(--primary-blue);
+}
+
+
+@media (max-width: 860px) {
+    .Footer {
+        height: 1200px;
+    }
+
+    .footer-content-container {
+        display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "footer-shortcuts" "footer-contact";
+    }
+
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .terms { 
+        justify-content: center;
+    }
+
+    .footer .copyright {
+        justify-content: center;
+    }
+}
+
+@media (max-width:460px) {
+
+    .Footer {
+        height: 900px;
+        grid-template-rows: 1.8fr 0.2fr; 
+    }
+
+    .footer-shortcuts {
+        width: 80%;
+    }
+    .footer-contact {
+        width: 80%;
+    }
+
+    .social-networks img {
+    width: 20px;
+    margin-right: 15px;}
+}
+
+@media (max-width:320px) {
+    .Footer {
+        height: 900px;
+        grid-template-rows: 1.9fr 0.1fr; 
+    }
+    .footer .terms, .footer .copyright, .footer .privacy-policy  { 
+        font-size: 12px;
+    }
+
+    .social-networks img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+}

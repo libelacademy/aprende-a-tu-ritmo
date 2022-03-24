@@ -1,0 +1,44 @@
+.Countdown {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Countdown h3 {
+    color: var(--base-3);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.Countdown h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.countdown-timer {
+    display: flex;
+}
+
+.segment {
+    width: 30px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 12px;
+}
+
+.number {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 14px;
+    color: var(--base-3);
+}

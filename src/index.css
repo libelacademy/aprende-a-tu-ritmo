@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --base-1: #000000;
+    --base-2: #fafafa;
+    --base-3: #8f8f8f;
+    --line: #8f8f8f73;
+    --primary-blue: #6000de;
+    --cyan: #0ff;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-buttons {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--primary-blue);
+    color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
+
+.padding {
+    padding: 0px 140px;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7000e3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b31ff;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #8b31ff;
+}
+
+::-webkit-scrollbar-track {
+  background: #1d1d1d;
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #262626;
+}
+textarea::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #7000e3;
+  border-radius: 7px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #8b31ff;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+textarea::-webkit-scrollbar-thumb:active {
+  background-color: #8b31ff;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #c2c2c2;
+  border-radius: 7px;
+}
+
+textarea::-webkit-scrollbar-track:hover,
+textarea::-webkit-scrollbar-track:active {
+  background: #bababa;
+}
+
+.NavButton {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width:1280px) {
+  .padding {
+    padding: 0px 60px;
+
+  }
+}
+
+@media (max-width:1024px) {
+  .padding {
+    padding: 0px 20px;
+
+  }
+}
+
+@media (max-width:460px) {
+  .padding {
+    padding: 0px 10px;
+
+  }
+}

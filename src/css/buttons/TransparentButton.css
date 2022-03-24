@@ -1,0 +1,19 @@
+.TransparentButton {
+        height: 48px;
+    border-radius: 24px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    margin-top: 40px;
+}
+
+.TransparentButton:hover {
+    background-color: var(--base-3);
+    border: 1px solid var(--base-3);
+    color: white !important;
+}
