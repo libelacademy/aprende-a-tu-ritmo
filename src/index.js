@@ -15,6 +15,7 @@ import advisoryReducer from "./features/advisory";
 import sideMenuReducer from "./features/menu";
 import bannerReducer from "./features/banner";
 import trainingReducer from "./features/training";
+import Info from "./components/modals/Info";
 
 const store = configureStore({
     reducer: {
@@ -34,6 +35,7 @@ ReactDOM.render(
             <InformativeTalks />
             <Training />
             <Whatsapp />
+            <Info />
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")
