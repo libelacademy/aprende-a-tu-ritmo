@@ -1,4 +1,4 @@
-.Result {
+.Membership {
     width: 330px;
     height: auto;
     background-color: #343444;
@@ -11,7 +11,7 @@
     display: grid;
 }
 
-.result-image {
+.membership-image {
     width: 290px;
     height: 290px;
     background-color: #7a798a;
@@ -26,7 +26,7 @@
     -o-border-radius: 10px;
 }
 
-.result-video-button {
+.membership-video-button {
     border: none;
     width: 144px;
     height: 46px;
@@ -48,31 +48,31 @@
     justify-content: center;
 }
 
-.result-video-icon {
+.membership-video-icon {
     color: var(--primary-blue);
     font-size:16px;
 }
 
-.result-video-button span {
+.membership-video-button span {
     margin-left: 5px;
 }
 
-.Result:hover .result-video-button {
+.membership:hover .membership-video-button {
     top: 50%;
     opacity: 1;
     visibility: visible; 
 }
 
-.result-video-button:hover {
+.membership-video-button:hover {
     background-color: var(--primary-blue);
     color: white;
 }
 
-.result-video-button:hover .result-video-icon {
+.membership-video-button:hover .membership-video-icon {
     color: white;
 }
 
-.results-share-button {
+.memberships-share-button {
     width: 36px;
     height: 36px;
     background-color: #343444;
@@ -83,22 +83,22 @@
     -o-border-radius: 13px;
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
-.result-social-networks-box {
+.membership-social-networks-box {
     background-color: #343444;
     height: 54px;
     width: auto;
     padding: 0px 8px;
     position: absolute;
-    left: 36px;
+    right: 36px;
     top: 2px;
-    margin-left: 10px;
+    margin-right: 10px;
     cursor: auto;
     border-radius: 13px;
     -webkit-border-radius: 13px;
@@ -115,11 +115,11 @@
     -o-transition: 0.3s all ease-in;
 }
 
-.result-social-networks-box .react-share__ShareButton {
+.membership-social-networks-box .react-share__ShareButton {
     height: 36px;
 }
 
-.result-countdown {
+.membership-countdown {
     width: 150px;
     height: 36px;
     background-color: #14141F;
@@ -141,7 +141,7 @@
     justify-content: center;
 }
 
-.result-countdown-timer {
+.membership-countdown-timer {
     width: 120px;
     height: 24px;
     display: flex;
@@ -149,7 +149,7 @@
     align-items: center;
 }
 
-.result-countdown-timer span {
+.membership-countdown-timer span {
     width: 80px;
     font-size: 14px;
     line-height: 24px;
@@ -157,7 +157,7 @@
     text-align: center;
 }
 
-.result-countdown-icon {
+.membership-countdown-icon {
     width: 24px;
     height: 24px;
     display: flex;
@@ -167,7 +167,7 @@
     font-size: 20px;
 }
 
-.result-header {
+.membership-header {
     width: 100%;
     height: 26px;
     display: flex;
@@ -176,7 +176,7 @@
     margin-top: 20px;
 }
 
-.result-header h1 {
+.membership-header > h1 {
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
@@ -184,7 +184,7 @@
     text-align: left;
 }
 
-.result-header span {
+.membership-header > span {
     display: inline-block;
     font-size: 12px;
     line-height: 20px;
@@ -196,7 +196,7 @@
 
 }
 
-.result-information {
+.membership-information {
     width: 100%;
     height: 48px;
     margin-top: 17px;
@@ -204,12 +204,12 @@
     justify-content: space-between;
 }
 
-.result-user {
+.membership-user {
     display: flex;
     align-items: center;
 }
 
-.result-user-avatar {
+.membership-user-avatar {
     width: 35px;
     height: 35px;
     border-radius: 20%;
@@ -228,36 +228,36 @@
     padding-bottom: 2px;
 }
 
-.result-user-avatar img {
+.membership-user-avatar img {
     /* margin-bottom: 3px; */
     width: 20px;
 }
 
-.Result h2 {
+.Membership h2 {
     font-size: 14px;
     font-weight: 500;
 }
 
-.Result h3 {
+.Membership h3 {
     font-size: 12px;
     font-weight: 500;
     color: #8a8aa0;
 }
 
-.result-price {
+.membership-price {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
 }
 
-.Result:hover {
+.membership:hover {
     margin-bottom: 20px;
     margin-top: 0px;
 
 }
 
-.result-separator {
+.membership-separator {
     width: 100%;
     height: 1px;
     background-color: black;
@@ -285,13 +285,13 @@
 }
 
 @media (max-width: 320px) {
-    .Result {
+    .membership {
         width: 310px;
         height: 420px;
         padding: 15px;
     }
 
-    .result-image {
+    .membership-image {
         width: 280px;
         height: 280px;
     }

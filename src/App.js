@@ -8,6 +8,7 @@ import Financing from "./components/Financing";
 import Benefits from "./components/Benefits";
 import Results from "./components/Results";
 import Header from "./components/Header";
+import Memberships from "./components/Memberships";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Navbar />
             <Header />
             <Results />
+            <Memberships />
             <Benefits />
             <Financing />
             <FAQ />
