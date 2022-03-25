@@ -195,46 +195,7 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navigation">
-                    <div className="nav-countdown">
-                        <a
-                            href="https://libel.academy/3d-camp"
-                            className="nav-countdown-image"
-                        >
-                            <img src={lo3dCamp} alt="3D Camp" />
-                        </a>
-                        <div className="nav-countdown-title">
-                            3D CAMP <br />{" "}
-                            <a href="https://libel.academy/3d-camp">
-                                ONLINE - EN VIVO
-                            </a>
-                        </div>
-                        <div className="nav-countdown-timer">
-                            <div className="nav-countdown-segment">
-                                <div className="nav-countdown-letters">DIA</div>
-                                <div className="nav-countdown-numbers">
-                                    {remainingTime.days}
-                                </div>
-                            </div>
-                            <div className="nav-countdown-segment">
-                                <div className="nav-countdown-letters">HOR</div>
-                                <div className="nav-countdown-numbers">
-                                    {remainingTime.hours}
-                                </div>
-                            </div>
-                            <div className="nav-countdown-segment">
-                                <div className="nav-countdown-letters">MIN</div>
-                                <div className="nav-countdown-numbers">
-                                    {remainingTime.minutes}
-                                </div>
-                            </div>
-                            <div className="nav-countdown-segment">
-                                <div className="nav-countdown-letters">SEG</div>
-                                <div className="nav-countdown-numbers">
-                                    {remainingTime.seconds}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div className="shortcuts">
                         <a href="https://libel.academy/zbrush/">Licencias</a>
 
