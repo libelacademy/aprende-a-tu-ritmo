@@ -2,12 +2,12 @@
 
 import image1 from '../images/memberships/recargada.jpeg';
 import image2 from '../images/memberships/black.jpeg';
-import image3 from '../images/memberships/cartoon.png';
+import image3 from '../images/memberships/cartoon.jpeg';
 
 
 import webpImage1 from '../images/memberships/recargada.jpeg';
 import webpImage2 from '../images/memberships/black.jpeg';
-import webpImage3 from '../images/memberships/cartoon.png';
+import webpImage3 from '../images/memberships/cartoon.jpeg';
 
 const results = [
   {
