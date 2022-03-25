@@ -32,6 +32,7 @@ import image29 from '../images/result/29.jpg';
 import image30 from '../images/result/30.jpg';
 import image31 from '../images/result/31.jpg';
 import image32 from '../images/result/32.jpg';
+import image33 from '../images/result/33.jpg';
 
 import webpImage1 from '../images/result/1.webp';
 import webpImage2 from '../images/result/2.webp';
@@ -65,6 +66,7 @@ import webpImage29 from '../images/result/29.webp';
 import webpImage30 from '../images/result/30.webp';
 import webpImage31 from '../images/result/31.webp';
 import webpImage32 from '../images/result/32.webp';
+import webpImage33 from '../images/result/33.webp';
 
 const results = [
   {
@@ -457,7 +459,18 @@ const results = [
     priceBefore: '99',
     url: { card: 'https://payco.link/1396019', paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P7D2TJN6CA7PA' },
   },
-
+  {
+    id: 32,
+    technology: 'ZBrush',
+    project: 'Soldado AAA',
+    student: 'Pablo Perdomo',
+    image: image33,
+    imageWebp: webpImage33,
+    video: 'https://www.youtube.com/watch?v=Ck8FCqnxndE',
+    price: '149',
+    priceBefore: '249',
+    url: { card: 'https://payco.link/1396029', paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JARA735FEBWYU' },
+  },
 ];
 
 export default results;
