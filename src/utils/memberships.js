@@ -30,6 +30,17 @@ const results = [
     priceBefore: '119',
     url: { card: 'https://payco.link/1394381', paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BHX4XKZMSYZME' },
   },
+  // {
+  //   id: 2,
+  //   technology: '23 Cursos',
+  //   project: 'Membresía Black',
+  //   student: 'Varios',
+  //   image: image2,
+  //   imageWebp: webpImage2,
+  //   price: '79',
+  //   priceBefore: '119',
+  //   url: { card: 'https://payco.link/1394381', paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BHX4XKZMSYZME' },
+  // },
 ];
 
 export default results;

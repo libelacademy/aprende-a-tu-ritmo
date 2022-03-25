@@ -1,4 +1,4 @@
-/** @format */
+  /** @format */
 
 import image1 from '../images/result/1.jpg';
 import image2 from '../images/result/2.jpg';
@@ -31,6 +31,7 @@ import image28 from '../images/result/28.jpg';
 import image29 from '../images/result/29.jpg';
 import image30 from '../images/result/30.jpg';
 import image31 from '../images/result/31.jpg';
+import image32 from '../images/result/32.jpg';
 
 import webpImage1 from '../images/result/1.webp';
 import webpImage2 from '../images/result/2.webp';
@@ -63,6 +64,7 @@ import webpImage28 from '../images/result/28.webp';
 import webpImage29 from '../images/result/29.webp';
 import webpImage30 from '../images/result/30.webp';
 import webpImage31 from '../images/result/31.webp';
+import webpImage32 from '../images/result/32.webp';
 
 const results = [
   {
@@ -443,6 +445,19 @@ const results = [
     priceBefore: '19.9',
     url: { card: 'https://payco.link/1392121', paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P9V7X4LLWPLV6' },
   },
+  {
+    id: 31,
+    technology: 'Susbtance',
+    project: 'Texturizado y Look Dev',
+    student: 'Mani Salguero',
+    image: image32,
+    imageWebp: webpImage32,
+    video: 'https://www.youtube.com/watch?v=draIbMrDW04',
+    price: '24.9',
+    priceBefore: '99',
+    url: { card: 'https://payco.link/1396019', paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P7D2TJN6CA7PA' },
+  },
+
 ];
 
 export default results;
