@@ -82,6 +82,18 @@ const questions = [
       </div>
     ),
   },
+  {
+    id: 5,
+    question:
+      '¿Los cursos incluyen licencias?',
+    answer: (
+      <div>
+        <p>
+        No, ninguno de los cursos o membresías del aniversario incluyen licencias
+        </p>
+      </div>
+    ),
+  },
 ];
 
 export default questions;

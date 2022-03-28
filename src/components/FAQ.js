@@ -77,6 +77,15 @@ const FAQ = () => {
                                     question === questions[4].id ? true : false
                                 }
                             />
+                            <Question
+                                id={questions[5].id}
+                                question={questions[5].question}
+                                answer={questions[5].answer}
+                                handleQuestion={handleQuestion}
+                                active={
+                                    question === questions[5].id ? true : false
+                                }
+                            />
                         </div>
                         <a
                             href="https://libel.academy/asesoria"
