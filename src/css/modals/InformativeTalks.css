@@ -22,10 +22,9 @@
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0 10px 10px 4px rgba(0, 0, 0, 0.18);
-
 }
 
-.InformativeTalks  a {
+.InformativeTalks a {
   height: 36px;
   border-radius: 18px;
   border: 2px solid var(--cyan);
@@ -38,33 +37,31 @@
   padding: 8px 12px;
 }
 
-.it-icon{
+.it-icon {
   font-size: 20px;
   margin-right: 15px;
 }
-
 
 .InformativeTalks a:hover {
   transform: scale(1.05);
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-
 .close-information {
   border: none;
   background-color: var(--base-3);
   width: 20px;
-  height:20px;
+  height: 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: 18px;
   cursor: pointer;
-  color: white; 
+  color: white;
   position: absolute;
   top: -5px;
-  right: -5px; 
+  right: -5px;
 }
 
 .close-information:hover {
@@ -72,16 +69,7 @@
 }
 
 @media (max-width: 460px) {
-.InformativeTalks {
-  width: 100%;
-  height: 76px;
-  left: 0;
-  bottom: 0;
-  justify-content: flex-start;
-  padding-left: 20px;
-}
-.InformativeTalks p {
-  display: none;
-}
-  
+  .InformativeTalks {
+    display: none;
+  }
 }

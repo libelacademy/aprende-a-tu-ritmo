@@ -51,7 +51,7 @@ const Footer = () => {
                                     Escuela Ilustración
                                 </a>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a href="https://libel.academy/zbrush/">
                                     Licencias
                                 </a>
@@ -66,7 +66,7 @@ const Footer = () => {
                                 className={"footer-list-li"}
                             >
                                 Resultados
-                            </Link>
+                            </Link> */}
                         </ul>
                     </div>
                     <div className="footer-contact">

@@ -49,10 +49,10 @@ const Header = () => {
   }
 
   return (
-    <div
+    <div  
       className='Header'
       id='home'
-      style={{ paddingTop: `${80 + headerTop}px` }}>
+      style={{ paddingTop: `${40 + headerTop}px` }}>
       <div className='header-container container padding'>
         <img src={light} alt='' className='image-center' />
         <div className='header-information'>
