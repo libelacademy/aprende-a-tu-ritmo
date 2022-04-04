@@ -53,7 +53,7 @@ const Whatsapp = () => {
                         name={"Libel 24/7"}
                         dependency={"Atención al Alumno"}
                         avatar={avatar1}
-                        url="https://wa.link/8mede4"
+                        url="https://wa.link/3yhau9"
                     />
                     <MemberTag
                         name={"Administrativo"}
