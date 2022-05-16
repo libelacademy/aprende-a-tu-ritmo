@@ -16,7 +16,7 @@ import sideMenuReducer from "./features/menu";
 import bannerReducer from "./features/banner";
 import trainingReducer from "./features/training";
 import Info from "./components/modals/Info";
-import ScheduleTalk from "./components/modals/ScheduleTalk";
+
 
 const store = configureStore({
     reducer: {
