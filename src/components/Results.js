@@ -11,14 +11,14 @@ const Results = () => {
         <div className="Results" id="masters">
             <div className="results-container container">
                 <h1>
-                    OFERTAS{" "}
+                    Aprende{" "}
                     <span>
                         <img
                             src={line}
                             alt="underline"
                             className="results-line"
                         />
-                        EXCLUSIVAS
+                        A TU RITMO
                     </span>
                 </h1>
                 <div className="results-content">
@@ -27,6 +27,9 @@ const Results = () => {
                             <Result key={index} result={result} />
                         ))}
                 </div>
+                <a HREF="https://cursos.libel.academy/collections?category=courses" target={"_blank"} rel="noreferrer" className="button">
+                    VER MÁS CURSOS
+                </a>
             </div>
         </div>
     );

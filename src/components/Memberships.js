@@ -27,6 +27,9 @@ const Memberships = () => {
                             <Membership key={index} membership={result} />
                         ))}
                 </div>
+                <a className="button" href="https://cursos.libel.academy/collections?category=pack" target={"_blank"} rel="noreferrer">
+                    VER PACKS
+                </a>
             </div>
         </div>
     );

@@ -28,9 +28,9 @@ const questions = [
     answer: (
       <div>
         <p>
-          No, los cursos seleccionados para el aniversario son
-          únicamente en vídeo. No incluyen Discord ni feedback del
-          maestro.
+          No, los cursos seleccionados para aprender a tu ritmo son
+          únicamente en vídeo. No incluyen Discord, licencias ni
+          feedback del maestro.
         </p>
       </div>
     ),
@@ -41,26 +41,18 @@ const questions = [
     answer: (
       <div>
         <p>
-          Los cursos seleccionados para el aniversario Libel tienen un
-          tiempo de acceso de un año.
+        Los cursos seleccionados para aprender a tu rimo tienen un tiempo de acceso de un año.
         </p>
       </div>
     ),
   },
   {
     id: 3,
-    question: '¿Cómo reclamo el cupón de 40% en másteres?',
+    question: '¿Cómo obtengo el certificado del curso?',
     answer: (
       <div>
         <p>
-          Envía un correo a{' '}
-          <b> coordinacionacademica@libel.academy</b> indicando que
-          compraste 230 USD o más en los cursos seleccionados para el
-          aniversario. No olvides mencionar el medio de pago usado y
-          el correo registrado en los pagos.
-          <br />
-          Revisaremos y si cumples con lo anterior, activaremos el
-          cupón.
+        Por favor revisa nuestros <a href="https://drive.google.com/file/d/1pNyW6hBjl0kwhpha0UgM0DLPqCzOYXvs/view" target={"_blank"} rel="noreferrer">Términos y Condiciones para certificarse</a>, allí estará toda la información que necesitas.
         </p>
       </div>
     ),
@@ -84,12 +76,11 @@ const questions = [
   },
   {
     id: 5,
-    question:
-      '¿Los cursos incluyen licencias?',
+    question: '¿Los cursos incluyen licencias?',
     answer: (
       <div>
         <p>
-        No, ninguno de los cursos o membresías del aniversario incluyen licencias
+        No, ninguno de los cursos o membresías para aprender a tu ritmo incluyen licencias.
         </p>
       </div>
     ),

@@ -28,6 +28,7 @@
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "home navigation academy";
+
 }
 
 .home {
@@ -40,12 +41,16 @@
 }
 .navigation {
     grid-area: navigation;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1.3fr 0.7fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "nav-countdown shortcuts";
-    grid-area: navigation;
+    grid-area: navigation; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
 }
 
 .nav-countdown {
@@ -115,7 +120,7 @@
     margin-right: 20px;
 }
 
-.Navbar .nav-courses {
+.nav-courses {
     color: #ffffff;
     height: 100%;
     border: none;
@@ -128,18 +133,18 @@
     outline: none;
 }
 
-.Navbar .nav-courses:hover {
+.nav-courses:hover {
     color: rgba(143, 143, 143, 1);
     border-bottom: 2px solid #6000de;
 }
 
-.shortcuts a {
+.navigation a {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.shortcuts a:hover {
+.navigation a:hover {
     color: rgba(143, 143, 143, 1);
     border-bottom: 2px solid #6000de;
 }
@@ -260,11 +265,16 @@
 }
 
 @media (max-width: 1024px) {
-    .navbar-container {
-        grid-template-columns: 1fr 1fr 1fr;
+
+    .home {
+        border: none;
     }
 
-    .navigation {
+    .navbar-container {
+        grid-template-columns: 0.6fr 1.4fr 1fr;
+    }
+
+    /* .navigation {
         grid-area: navigation;
         display: grid;
         grid-template-columns: 1fr;
@@ -272,7 +282,7 @@
         gap: 0px 0px;
         grid-template-areas: "shortcuts";
         grid-area: navigation;
-    }
+    } */
 
     .nav-countdown {
         display: none;
@@ -305,7 +315,8 @@
 }
 
 @media (max-width: 860px) {
-    .shortcuts,
+    .navigation a,
+    .nav-courses,
     .register,
     .login {
         display: none;

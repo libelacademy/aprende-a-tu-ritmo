@@ -12,8 +12,6 @@ import youtube from "../images/social_networks/025-youtube.png";
 import telegram from "../images/social_networks/018-telegram.png";
 import DegradeButton from "./buttons/DegradeButton";
 
-import { Link } from "react-scroll";
-
 const Footer = () => {
     return (
         <div className="Footer">

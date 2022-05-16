@@ -90,11 +90,8 @@ const Membership = ({ membership }) => {
         </div>
       </div>
       <div className="membership-separator"></div>
-      <a href={membership.url.card} target={"_blank"} rel="noreferrer" className="pay-button">
-        PAGAR CON TARJETA
-      </a>
-      <a href={membership.url.paypal} target={"_blank"} rel="noreferrer" className="pay-button">
-        PAGAR CON PAYPAL
+      <a href={membership.url} target={"_blank"} rel="noreferrer" className="pay-button">
+        VER MEMBRESÍA
       </a>
     </div>
   );

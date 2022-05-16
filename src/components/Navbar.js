@@ -195,8 +195,9 @@ const Navbar = () => {
                 </div>
                 <div className="navigation">
                     
-                    <div className="shortcuts">
-                        {/* <a href="https://libel.academy/zbrush/">Licencias</a> */}
+                    <a href="https://libel.academy/aprende-a-tu-ritmo" style={{marginRight: 20}}>A tu ritmo</a>
+                    <a href="https://libel.academy/master" style={{marginRight: 20}}>Masters</a>
+                        <a href="https://cursos.libel.academy/collections?category=membresias" style={{marginRight: 20}}>Membresía</a>
 
                         <button
                             style={{ color: `${courseColor}` }}
@@ -222,7 +223,8 @@ const Navbar = () => {
                                 />
                             )}
                         </button>
-                    </div>
+                    {/* <div className="shortcuts">
+                    </div> */}
                 </div>
                 <div className="academy">
                     <a
@@ -340,7 +342,7 @@ const Navbar = () => {
                             3D Camp
                         </a>
                         <a
-                            href="https://cursos.libel.academy/collections?category=courses"
+                            href="https://libel.academy/aprende-a-tu-ritmo"
                             className="menu-shortcuts-item"
                         >
                             Aprende a tu ritmo
@@ -474,6 +476,17 @@ const Navbar = () => {
                                         Curso de ilustración
                                     </a>
                                 </li>
+                                <li>
+                                    <div className="corses-bullet-point">
+                                        <img
+                                            src={bulletPoint1}
+                                            alt="bullet point"
+                                        />
+                                    </div>
+                                    <a href="https://libel.academy/aprende-a-tu-ritmo">
+                                        Aprende a tu ritmo
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div className="courses-column">
@@ -512,7 +525,7 @@ const Navbar = () => {
                                         3D Camp
                                     </a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <div className="corses-bullet-point">
                                         <img
                                             src={bulletPoint4}
@@ -522,7 +535,7 @@ const Navbar = () => {
                                     <a href="https://cursos.libel.academy/collections?category=courses">
                                         Aprende a tu ritmo
                                     </a>
-                                </li>
+                                </li> */}
                                 <li>
                                     <div className="corses-bullet-point">
                                         <img

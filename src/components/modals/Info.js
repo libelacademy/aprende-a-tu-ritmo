@@ -4,7 +4,7 @@ import '../../css/modals/Info.css';
 
 import { IoClose } from 'react-icons/io5';
 
-import image from '../../images/modalImage.jpg'
+import image from '../../images/modalImage2.jpeg'
 
 const Info = () => {
 

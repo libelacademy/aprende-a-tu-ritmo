@@ -1,17 +1,17 @@
 const benefits = [
     {
-        title: "Estudia online a tu ritmo",
-        body: "Todos los cursos seleccionados para el aniversario están compuestos por clases en vídeo para que aprendas a tu ritmo. No incluyen feedback.",
+        title: "ESTUDIA ONLINE A TU RITMO",
+        body: "Todos los cursos seleccionados para aprender a tu ritmo están compuestos por clases en vídeo para que aprendas a tu ritmo. No incluyen feedback.",
         more: null
     },
     {
-        title: "Cupón del 40% en nuestros másteres",
-        body: "Compra 230 USD o más, en cursos seleccionados para el aniversario y recibe un cupón de descuento del 40% para el máster en Blender, en Rigging o en Escultura para Impresión",
-        more: "Cupón de descuento solo para un máster y no acumulable con otras promociones, ofertas o descuentos."
+        title: "Certificado de curso",
+        body: "Nuestros cursos, excepto los de iniciación, tienen certificado de cumplimiento de metas siempre y cuando entregues tus resultados y sean aprobados.",
+        more: null
     },
     {
-        title: "Acceso por un año",
-        body: "Todos los cursos seleccionados para el aniversario tienen acceso al contenido por un año.",
+        title: "Acceso por un año al contenido",
+        body: "Todos los cursos seleccionados para aprender a tu ritmo tienen acceso al contenido por un año.",
         more: null
     },
     {

@@ -48,7 +48,7 @@ const Benefits = () => {
                 <h1 className="benefits-title">
                     <span>BENEFICIOS</span>
                     <br />
-                    ANIVERSARIO LIBEL
+                    CURSOS A TU RITMO
                     <img src={line} alt="decoration Line" />
                 </h1>
                 <div className="benefits-content">

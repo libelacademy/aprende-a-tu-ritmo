@@ -87,7 +87,7 @@ const Result = ({ result }) => {
       <div className="result-header">
         <h1>{result.project}</h1>
         <span
-          style={{backgroundColor: "#600de"}}
+          style={{backgroundColor: "#600de", marginLeft: 10, padding: "4px 8px", borderRadius: 5}}
         >
           {result.technology}
         </span>
@@ -108,11 +108,8 @@ const Result = ({ result }) => {
         </div>
       </div>
       <div className="result-separator"></div>
-      <a href={result.url.card} target={"_blank"} rel="noreferrer" className="pay-button">
-        PAGAR CON TARJETA
-      </a>
-      <a href={result.url.paypal} target={"_blank"} rel="noreferrer" className="pay-button">
-        PAGAR CON PAYPAL
+      <a href={result.url} target={"_blank"} rel="noreferrer" className="pay-button">
+        VER CURSO
       </a>
     </div>
   );
