@@ -32,7 +32,7 @@ const BannerTop = () => {
                 }}
             />
             <div className="banner-container container">
-                <p>Crea e imprime personajes en Blender<span> | <a href="https://libel.academy/impresion-3d-con-blender/">Descubre más</a></span></p>
+            <p>LIBEL UP - Cursos 100% gratis<span> | <a href="https://libel.academy/libel-up/">Descubre más</a></span></p>
             </div>
         </div>
     );
