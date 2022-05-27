@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "../../css/modals/Whatsapp.css";
 
 import { IoLogoWhatsapp, IoCloseSharp } from "react-icons/io5";
-import avatar1 from "../../images/avatar1.png"
+// import avatar1 from "../../images/avatar1.png"
 import avatar2 from "../../images/avatar2.png";
 
 const MemberTag = ({ name, dependency, avatar, url }) => {
@@ -49,12 +49,12 @@ const Whatsapp = () => {
                     <p className="whatsapp-chat-body-desc">
                         Nuestro equipo usualmente responde en pocos minutos
                     </p>
-                    <MemberTag
+                    {/* <MemberTag
                         name={"Libel 24/7"}
                         dependency={"Atención al Alumno"}
                         avatar={avatar1}
                         url="https://wa.link/3yhau9"
-                    />
+                    /> */}
                     <MemberTag
                         name={"Administrativo"}
                         dependency={"Registro y control"}

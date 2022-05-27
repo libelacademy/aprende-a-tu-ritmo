@@ -35,7 +35,7 @@
 
 .whatsapp-chat {
     width: 320px;
-    height: 260px;
+    height: auto;
     box-shadow: 0 10px 10px 4px rgba(0, 0, 0, 0.18);
     position: absolute;
     right: 0;
@@ -78,7 +78,7 @@
 
 .whatsapp-chat-body {
     width: 100%;
-    height: 200px;
+    height: auto;
     padding: 13px 20px 21px 19px;
 }
 
