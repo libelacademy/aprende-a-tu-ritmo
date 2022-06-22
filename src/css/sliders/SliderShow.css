@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.SlideContainer {
+/* .SlideContainer {
     display: flex;
     flex-wrap: nowrap;
 }
@@ -14,8 +14,7 @@
     object-fit: cover;
     overflow: hidden;
     transition: 0.3s ease all;
-    /* z-index: 10; */
-}
+} */
 
 .SlideControls {
     width: 100px;
@@ -35,6 +34,28 @@
     cursor: pointer;
     user-select: none;
     transition: 0.3s ease all;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 10;
+    font-size: 24;
+    bottom: 40px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Control.next {
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+    right: 60px;
+}
+
+.Control.prev {
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+    right: 108px;
 }
 
 .Control:hover {

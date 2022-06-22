@@ -1,101 +1,66 @@
-import React, { useEffect, useRef } from "react";
-import "../../css/sliders/SliderShow.css";
-import CoursePreview from "../cards/CoursePreview";
-import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+/** @format */
+
+import React from 'react';
+import '../../css/sliders/SliderShow.css';
+import CoursePreview from '../cards/CoursePreview';
+import { IoArrowBack, IoArrowForward } from 'react-icons/io5';
+import Slider from 'react-slick';
 
 const SlideShow = ({ courses }) => {
-    const slideshow = useRef(null);
-    const intervaloSlideshow = useRef(null);
-
-    const nextSlide = () => {
-        //Comprobar si hay elementos
-        if (slideshow.current.children.length > 0) {
-            //Obtener el primer elemento
-            const firstElement = slideshow.current.children[0];
-            //Establecer la transición
-            slideshow.current.style.transition = `500ms ease-out all`;
-            const slideSize = slideshow.current.children[0].offsetWidth;
-            // Mover slideshow
-            slideshow.current.style.transform = `translateX(-${slideSize}px)`;
-
-            const transition = () => {
-                //Reiniciar la posicion del slideshow
-                slideshow.current.style.transition = "none";
-                slideshow.current.style.transform = `translateX(0)`;
-
-                //
-                slideshow.current.appendChild(firstElement);
-
-                slideshow.current.removeEventListener(
-                    "transitionend",
-                    transition
-                );
-            };
-            //Event listener
-            slideshow.current.addEventListener("transitionend", transition);
-        }
-    };
-
-    const previousSlide = () => {
-
-        if (slideshow.current.children.length > 0) {
-            const index = slideshow.current.children.length - 1;
-            const lastElement = slideshow.current.children[index];
-            slideshow.current.insertBefore(
-                lastElement,
-                slideshow.current.firstChild
-            );
-            const slideSize = slideshow.current.children[0].offsetWidth;
-
-            slideshow.current.style.transition = "none";
-            slideshow.current.style.transform = `translate(-${slideSize}px)`;
-
-            setTimeout(() => {
-                slideshow.current.style.transition = `500ms ease-out all`;
-
-                slideshow.current.style.transform = `translateX(0)`;
-            }, 30);
-        }
-    };
-
-    useEffect(() => {
-        intervaloSlideshow.current = setInterval(() => {
-            nextSlide()
-        }, 4000);
-
-        //
-        slideshow.current.addEventListener('mouseenter', () => {
-            clearInterval(intervaloSlideshow.current);
-        })
-
-        //
-        slideshow.current.addEventListener("mouseleave", () => {
-            intervaloSlideshow.current = setInterval(() => {
-                nextSlide();
-            }, 4000);
-        });
-    }, [])
 
 
+  const NextArrow = (props) => {
+    const { onClick } = props;
     return (
-        <div className="SliderShow">
-            <div className="SlideContainer" ref={slideshow}>
-                {courses.map((course, index) => (
-                    <div className="SlideCourse" key={index}>
-                        <CoursePreview
-                            backgroundImage={course.backgroundImage}
-                            course={course.course}
-                            number={course.number}
-                        />
-                    </div>
-                ))}
-            </div>
-            <div className="SlideControls">
-                <IoArrowBack className="Control" onClick={previousSlide} />
-                <IoArrowForward className="Control" onClick={nextSlide} />
-            </div>
-        </div>
+      <div className='Control next' onClick={onClick}>
+        <IoArrowForward />
+      </div>
     );
+  };
+
+  const PreviousArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div className='Control prev' onClick={onClick}>
+        <IoArrowBack />
+      </div>
+    );
+  };
+
+  var settings = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PreviousArrow />,
+  };
+
+  return (
+    <div className='SliderShow'>
+      <div className='SlideContainer' >
+        <Slider {...settings}>
+          {courses.map((course, index) => (
+            <div
+              className='SlideCourse'
+              key={index}
+              style={{ height: 400 }}>
+              <CoursePreview
+                backgroundImage={course.backgroundImage}
+                course={course.course}
+                number={course.number}
+                url={course.url}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
+  );
 };
 
 export default SlideShow;

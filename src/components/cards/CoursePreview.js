@@ -1,9 +1,10 @@
 import React from 'react'
 import '../../css/cards/CoursePreview.css'
 
-const CoursePreview = ({number, course, backgroundImage}) => {
+const CoursePreview = ({number, course, backgroundImage, url}) => {
     return (
-        <div
+        <a
+            href={url}
             className="CoursePreview"
             style={{
                 backgroundImage: `linear-gradient(0deg, rgba(96, 0, 222, 0.6) 30%, rgba(96, 0, 222, 0)) , url(${backgroundImage})`,
@@ -11,7 +12,7 @@ const CoursePreview = ({number, course, backgroundImage}) => {
         >
             <h1>{number}</h1>
             <h2>{course}</h2>
-        </div>
+        </a>
     );
 }
 
