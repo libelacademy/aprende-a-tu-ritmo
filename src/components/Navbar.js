@@ -14,7 +14,9 @@ import {
 } from 'react-icons/io5';
 
 import logo from '../images/logo.png';
+
 import lo3dCamp from '../images/3d-camp-logo.png';
+import lo3dCampWebp from '../images/3d-camp-logo.webp';
 
 import bulletPoint1 from '../images/courses-list/002-gantt chart.png';
 import bulletPoint2 from '../images/courses-list/021-mail.png';
@@ -31,6 +33,7 @@ import { getRemainingTimeUntilMsTimestamp } from '../utils/countdown';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeSideMenu, showSideMenu } from '../features/menu';
 import { showModal } from '../features/modal';
+import Image from 'react-image-webp';
 
 const defaultRemainingTime = {
   seconds: '00',
@@ -131,8 +134,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const sideMenu = useSelector((state) => state.sideMenu.value.menu);
   const bannerTop = useSelector((state) => state.banner.value.banner);
-  
- 
+
   const [menu, setMenu] = useState(false);
 
   const [itemDetail, setItemDetail] = useState(coursesDetail);
@@ -149,7 +151,7 @@ const Navbar = () => {
     defaultRemainingTime
   );
 
-  const countdownTimestampMs = 'Sat, 19 Mar 2022 16:00:00 GMT-5';
+  const countdownTimestampMs = 'Wed, 5 Oct 2022 16:00:00 GMT-5';
 
   const menuContainerTop = bannerTop
     ? { top: 120, height: 'calc(100vh - 120px)' }
@@ -283,34 +285,39 @@ const Navbar = () => {
                 }
           }>
           <li className='menu-countdown'>
-            <div className='menu-countdown-image'>
-              <img src={lo3dCamp} alt='3D Camp' />
-            </div>
-            <div className='menu-countdown-timer'>
-              <div className='menu-countdown-segment'>
-                <div className='menu-countdown-letters'>DIA</div>
-                <div className='menu-countdown-numbers'>
-                  {remainingTime.days}
+            <a
+            href="https://libel.academy/3d-camp"
+              className='menu-countdown-image'>
+              <Image webp={lo3dCampWebp} src={lo3dCamp} alt='3D Camp' />
+            </a>
+            <div style={{width: '50%', height:'100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent:'center'}}>
+              <div className='menu-countdown-timer' style={{width: '100%', height: 'auto'}}>
+                <div className='menu-countdown-segment'>
+                  <div className='menu-countdown-letters'>DIA</div>
+                  <div className='menu-countdown-numbers'>
+                    {remainingTime.days}
+                  </div>
+                </div>
+                <div className='menu-countdown-segment'>
+                  <div className='menu-countdown-letters'>HOR</div>
+                  <div className='menu-countdown-numbers'>
+                    {remainingTime.hours}
+                  </div>
+                </div>
+                <div className='menu-countdown-segment'>
+                  <div className='menu-countdown-letters'>MIN</div>
+                  <div className='menu-countdown-numbers'>
+                    {remainingTime.minutes}
+                  </div>
+                </div>
+                <div className='menu-countdown-segment'>
+                  <div className='menu-countdown-letters'>SEG</div>
+                  <div className='menu-countdown-numbers'>
+                    {remainingTime.seconds}
+                  </div>
                 </div>
               </div>
-              <div className='menu-countdown-segment'>
-                <div className='menu-countdown-letters'>HOR</div>
-                <div className='menu-countdown-numbers'>
-                  {remainingTime.hours}
-                </div>
-              </div>
-              <div className='menu-countdown-segment'>
-                <div className='menu-countdown-letters'>MIN</div>
-                <div className='menu-countdown-numbers'>
-                  {remainingTime.minutes}
-                </div>
-              </div>
-              <div className='menu-countdown-segment'>
-                <div className='menu-countdown-letters'>SEG</div>
-                <div className='menu-countdown-numbers'>
-                  {remainingTime.seconds}
-                </div>
-              </div>
+              <b style={{fontSize: 12}}>- 5 OCTUBRE 2022 -</b>
             </div>
           </li>
 
@@ -350,7 +357,7 @@ const Navbar = () => {
               Aprende a tu ritmo
             </a>
             <a
-              href='https://cursos.libel.academy/collections?category=membresias'
+              href='https://libel.academy/membresia/'
               className='menu-shortcuts-item'>
               Membresías
             </a>
@@ -527,11 +534,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <button className="main-modal-button" onClick={() => {
-        dispatch(showModal())
-      }}>
-        Free
-      </button> 
+      <button
+        className='main-modal-button'
+        onClick={() => {
+          dispatch(showModal());
+        }}>
+        3DCAMP
+      </button>
     </nav>
   );
 };

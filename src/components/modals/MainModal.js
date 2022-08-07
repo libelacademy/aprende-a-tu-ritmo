@@ -1,78 +1,114 @@
 /** @format */
 
-import { IoClose } from 'react-icons/io5';
+import { IoClose, IoPlaySharp } from 'react-icons/io5';
 import '../../css/modals/MainModal.css';
 
 import Image from 'react-image-webp';
 
-import malla from '../../images/malla_svg-03.png';
-import mallaWebp from '../../images/malla_svg-03.webp';
-import gamer from '../../images/gamer_03.png';
-import gamerWebp from '../../images/gamer_03.webp';
+import libelIcon from '../../images/libel-icon.png';
 
-import blender from '../../images/technologies/logo-blender.png';
-import substance from '../../images/technologies/substance-3d-painter.png';
-import zbrush from '../../images/technologies/ZBrush-Logo.png';
+import backgroundLeft from '../../images/main/image 38.png';
+import backgroundLeftWebp from '../../images/main/image-38.webp';
+import backgroundRight from '../../images/main/pexels-yan-krukov-9072339 1.png';
+import backgroundRightWebp from '../../images/main/pexels-yan-krukov-9072339-1.webp';
+import backgroundNext from '../../images/main/background-next.jpg';
+import backgroundNextWebp from '../../images/main/background-next.webp';
+// import logo3dCamp from '../../images/3d-camp-logo.png';
+// import logo3dCampWebp from '../../images/3d-camp-logo.webp';
 
-import libelIcon from '../../images/libel-icon.png'
-
-import character from '../../images/Oscar Fernandez - 01TC.png';
-import {  useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../features/modal';
-
+import { useState } from 'react';
+import ReactPlayer from 'react-player';
 
 const MainModal = () => {
-  
-
-  const { close } = useSelector(state => state.modal.value)
+  const { close } = useSelector((state) => state.modal.value);
   const dispatch = useDispatch();
+  const [video, setVideo] = useState(false);
 
   const handleClose = () => {
-    dispatch(closeModal())
+    setVideo(false);
+    dispatch(closeModal());
   };
 
   return (
     <div className={`MainModal ${close ? 'close' : null}`}>
-      <img src={libelIcon} alt="Libel Academy" className="main-modal-libel-icon" />
+      <img
+        src={libelIcon}
+        alt='Libel Academy'
+        className='main-modal-libel-icon'
+        loading='lazy'
+      />
       <button className='main-modal-closer' onClick={handleClose}>
         <IoClose />
       </button>
       <div className='main-modal-container'>
-        <Image
-          webp={mallaWebp}
-          src={malla}
-          alt=''
-          className='main-modal-malla'
-        />
-        <Image
-          webp={gamerWebp}
-          src={gamer}
-          alt=''
-          className='main-modal-gamer'
-        />
-        <div className='main-modal-filter'></div>
+        <div className='main-modal-background'>
+          <Image
+            src={backgroundLeft}
+            webp={backgroundLeftWebp}
+            alt='backgroundLeft'
+            className='main-modal-background-left'
+          />
+          <Image
+            src={backgroundRight}
+            webp={backgroundRightWebp}
+            alt='backgroundRight'
+            className='main-modal-background-right'
+          />
+        </div>
+        <div className='main-modal-filter' />
         <div className='main-modal-content'>
-          <figure className='main-modal-character-wrapper'>
-            <img src={character} alt='' />
-          </figure>
-          <div className='main-modal-information'>
-            <h1>
-              APRENDE <span>3D</span>
+          {/* <Image src={logo3dCamp} webp={logo3dCampWebp} alt='logo3dCamp' style={{width: 130, marginBottom: 30}} /> */}
+          <div className='main-modal-badge'>Campamento 3D Online</div>
+          <div style={{ paddingTop: 10, paddingBottom: 10 }}>
+            <h2 className='main-modal-title'>
+              <span style={{ color: '#ced4da' }}>Sorteo por </span>
+              <strong style={{ color: '#6000de' }}>ENTRADAS</strong>
               <br />
-              <b>GRATIS</b>
-            </h1>
-            <p>
-              con profesionales de la industria, con acompañamiento y
-              feedback en vivo.
-            </p>
-            <img src={character} alt='' className="main-modal-character"/>
-            <div className='main-modal-icons-wrapper'>
-              {[blender, substance, zbrush].map((icon, index) => (
-                <img src={icon} key={index} alt='icon' />
-              ))}
-            </div>
-            <a href='https://libel.academy/asesoria/'>Aplica ahora</a>
+              <span style={{ color: '#ced4da' }}>Gratis al </span>
+              <span className='main-modal-level-wrapper'>
+                <strong className='main-modal-level'>3DCAMP!</strong>
+              </span>
+            </h2>
           </div>
+          <div style={{ paddingTop: 10, paddingBottom: 10 }}>
+            <p className='main-modal-text'>
+              Premiaremos a los mejores resultados con BECAS en
+              nuestros MÁSTER.
+            </p>
+          </div>
+          <div className='main-modal-video-wrapper'>
+            <div className='main-modal-video'>
+              <Image
+                webp={backgroundNextWebp}
+                src={backgroundNext}
+                alt='next-video'
+              />
+            </div>
+            <div
+              className='main-modal-video-play-btn'
+              onClick={() => setVideo(true)}>
+              <IoPlaySharp size={48} color='#343a40' />
+            </div>
+            {video && (
+              <div className='main-modal-video-modal'>
+                <ReactPlayer
+                  className='react-player'
+                  url='https://www.youtube.com/watch?v=VAqAkw6JPNI'
+                  playing={true}
+                  width='100%'
+                  height='100%'
+                  controls={true}
+                />
+              </div>
+            )}
+          </div>
+          <a
+            href='https://libel.academy/3d-camp'
+            className='main-modal-btn'>
+            Ver 3DCAMP
+          </a>
         </div>
       </div>
     </div>
