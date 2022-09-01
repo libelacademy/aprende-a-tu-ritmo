@@ -7,7 +7,7 @@ import Video from "./components/modals/Video";
 import Whatsapp from "./components/modals/Whatsapp";
 import InformativeTalks from "./components/modals/InformativeTalks";
 import Training from "./components/modals/Training";
-import MainModal from "./components/modals/MainModal";
+// import MainModal from "./components/modals/MainModal";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -41,7 +41,7 @@ ReactDOM.render(
             <InformativeTalks />
             <Training />
             <Whatsapp />
-            <MainModal />
+            {/* <MainModal /> */}
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")

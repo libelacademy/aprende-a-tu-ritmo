@@ -54,7 +54,7 @@
 
 @media (max-width:460px) {
     .BannerTop {
-        height: 60px;
+        height: 40px;
     }
     .banner-container {
         flex-direction: column;

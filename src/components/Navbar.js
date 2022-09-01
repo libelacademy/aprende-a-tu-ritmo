@@ -32,7 +32,6 @@ import SlideShow from './sliders/SlideShow';
 import { getRemainingTimeUntilMsTimestamp } from '../utils/countdown';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeSideMenu, showSideMenu } from '../features/menu';
-import { showModal } from '../features/modal';
 import Image from 'react-image-webp';
 
 const defaultRemainingTime = {
@@ -534,13 +533,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <button
-        className='main-modal-button'
-        onClick={() => {
-          dispatch(showModal());
-        }}>
-        3DCAMP
-      </button>
     </nav>
   );
 };

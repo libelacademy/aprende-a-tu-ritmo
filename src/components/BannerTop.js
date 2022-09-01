@@ -32,7 +32,7 @@ const BannerTop = () => {
                 }}
             />
             <div className="banner-container container">
-            <p>ENTRADAS GRATIS AL 3DCAMP<span> | Ver más <a href="https://libel.academy/3d-camp/">Libel Academy | 3D Camp</a></span></p>
+            <p>ÚNETE AL 3DCAMP<span> | <a href="https://libel.academy/3d-camp/">Ver más</a></span></p>
             </div>
         </div>
     );
