@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Footer.css";
 
 import logo from "../images/logo.png";
+
 import facebook from "../images/social_networks/005-facebook.png";
 import twitch from "../images/social_networks/020-twitch.png";
 import instagram from "../images/social_networks/008-instagram.png";
@@ -13,8 +14,17 @@ import telegram from "../images/social_networks/018-telegram.png";
 import DegradeButton from "./buttons/DegradeButton";
 
 const Footer = () => {
+    const handleLink = (e) => {
+        e.preventDefault();
+        const target = e.target.getAttribute("href");
+        const location = document.querySelector(target).offsetTop;
+        window.scrollTo({
+            left: 0,
+            top: location - 80,
+        });
+    };
     return (
-        <div className="Footer">
+        <footer className="Footer">
             <div className="footer-content">
                 <div className="footer-content-container container">
                     <div className="footer-shortcuts">
@@ -35,7 +45,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://libel.academy/escuela-domina-blender/">
+                                <a href="https://libel.academy/escuela-domina-blender">
                                     Escuela Blender
                                 </a>
                             </li>
@@ -53,18 +63,12 @@ const Footer = () => {
                                 <a href="https://libel.academy/zbrush/">
                                     Licencias
                                 </a>
+                            </li> */}
+                            <li>
+                                <a href="#results" onClick={handleLink}>
+                                    Resultados
+                                </a>
                             </li>
-                            <Link
-                                to="results"
-                                hashSpy={true}
-                                spy={true}
-                                smooth={true}
-                                duration={700}
-                                offset={-80}
-                                className={"footer-list-li"}
-                            >
-                                Resultados
-                            </Link> */}
                         </ul>
                     </div>
                     <div className="footer-contact">
@@ -143,7 +147,7 @@ const Footer = () => {
             <div className="footer">
                 <div className="footer-container container">
                     <a
-                        href="https://libel.academy/libel/politicas-de-privacidad/"
+                        href="https://libel.academy/politicas-de-privacidad/"
                         target={"_blank"}
                         rel="noreferrer"
                         className="privacy-policy"
@@ -151,7 +155,7 @@ const Footer = () => {
                         Política de Privacidad
                     </a>
                     <a
-                        href="https://libel.academy/libel/terminos-y-condiciones/"
+                        href="https://libel.academy/terminos-y-condiciones/"
                         target={"_blank"}
                         rel="noreferrer"
                         className="terms"
@@ -161,7 +165,7 @@ const Footer = () => {
                     <p className="copyright">&copy; Copyright 2022</p>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Video from "./components/modals/Video";
 import Whatsapp from "./components/modals/Whatsapp";
-import InformativeTalks from "./components/modals/InformativeTalks";
+// import InformativeTalks from "./components/modals/InformativeTalks";
 import Training from "./components/modals/Training";
 // import MainModal from "./components/modals/MainModal";
 
@@ -20,6 +20,7 @@ import sideMenuReducer from "./features/menu";
 import bannerReducer from "./features/banner";
 import trainingReducer from "./features/training";
 import modalReducer from "./features/modal"
+import UpdateBar from './components/modals/UpdateBar';
 
 
 const store = configureStore({
@@ -38,10 +39,11 @@ ReactDOM.render(
         <Provider store={store}>
             <App />
             <Video />
-            <InformativeTalks />
+            {/* <InformativeTalks /> */}
             <Training />
             <Whatsapp />
             {/* <MainModal /> */}
+            <UpdateBar />
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")
