@@ -10,43 +10,48 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
-  color: white;
-  font-size: 14px;
-  z-index: 10000;
-  opacity: 100;
-  visibility: visible;
-  transition: 0.5s all ease-in;
+	color: white;
+	font-size: 14px;
+	z-index: 10000;
+	opacity: 100;
+	visibility: visible;
+	transition: 0.5s all ease-in;
 }
 
 .update-bar.close {
-  bottom: -40px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s all ease-in;
+	bottom: -40px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s all ease-in;
 }
 
-
 .update-bar a {
-  color: white;
-  text-decoration: underline;
-  margin: 0 1ch;
-}	
+	color: white;
+	text-decoration: underline;
+	margin: 0 1ch;
+}
 
 .update-bar-btn {
-  border: none;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: rgba(225, 225, 225, 0.2);
-  left: 10px;
-  cursor: pointer;
+	border: none;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	-ms-border-radius: 40px;
+	-o-border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: rgba(225, 225, 225, 0.2);
+	left: 10px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.update-bar {
+		display: none;
+	}
 }
