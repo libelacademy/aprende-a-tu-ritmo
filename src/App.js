@@ -7,9 +7,9 @@ import FAQ from "./components/FAQ";
 import Financing from "./components/Financing";
 import Benefits from "./components/Benefits";
 import Results from "./components/Results";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 import Memberships from "./components/Memberships";
-import Header from "./components/Hero";
+// import Hero from "./components/Hero";
 
 function App() {
 

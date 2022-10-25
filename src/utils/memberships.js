@@ -38,7 +38,7 @@ const results = [
     student: 'Luis Duarte',
     image: image3,
     imageWebp: webpImage3,
-    price: 299,
+    price: 29.99,
     priceBefore: 399,
     url: 'https://cursos.libel.academy/bundles/Personajes-cartoon-cc3-iclone7',
   },

@@ -11,14 +11,14 @@ const Results = () => {
         <div className="Results" id="masters">
             <div className="results-container container">
                 <h1>
-                    Aprende{" "}
+                Aplica hasta el{" "}
                     <span>
                         <img
                             src={line}
                             alt="underline"
                             className="results-line"
                         />
-                        A TU RITMO
+                        90% Dto
                     </span>
                 </h1>
                 <div className="results-content">

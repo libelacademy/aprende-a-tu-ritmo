@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialSateValue = {
-    banner: true,
+    banner: false,
 };
 
 export const bannerSlice = createSlice({
