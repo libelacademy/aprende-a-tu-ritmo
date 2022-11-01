@@ -6,7 +6,7 @@ import '../../css/modals/WhatsappMobile.css';
 
 const WhatsappMobile = () => {
 	return (
-		<a href='https://wa.link/evitcw' target='_blank' rel='noreferrer' className='WhatsappMobile'>
+		<a href='https://wa.link/gzfc2s' target='_blank' rel='noreferrer' className='WhatsappMobile'>
 			<IoLogoWhatsapp size={32} style={{ marginRight: 10 }} />
 			<span>¡Hola! 👋 Resolvemos todas tus dudas.</span>
 		</a>
