@@ -1,98 +1,122 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React from 'react';
 import '../../css/cards/Membership.css';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import { IoShareSocialSharp } from 'react-icons/io5';
 
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  TelegramShareButton,
-  TelegramIcon,
-} from 'react-share';
-import libel from '../../images/logo_dot.png';
+import { AiFillQuestionCircle } from 'react-icons/ai';
+import { IoCheckmarkCircle } from 'react-icons/io5';
+import { useDispatch } from 'react-redux';
 
+import { openTrainingMore } from '../../features/training';
 
-const shareUrl = 'https://libel.academy/aniversario';
-const SocialIconStyle = { margin: '0px 2px', borderRadius: 5 };
-const shareQuote = "Conviértete en profesional 3D"
+//membership
 
 const Membership = ({ membership }) => {
-  
-  const [showShare, setShowShare] = useState(false)
+  const dispatch = useDispatch();
 
   return (
-    <div className="Membership">
-      <div
-        className="membership-image"
-        style={
-          isWebpSupported()
-            ? { backgroundImage: `url(${membership.imageWebp})` }
-            : { backgroundImage: `url(${membership.image})` }
-        }
-      >
-        <div className="memberships-share-button" onClick={() => {setShowShare(!showShare)}}>
-          <IoShareSocialSharp />
-          <div className="membership-social-networks-box" style={showShare ? {visibility: "visible", opacity: 1} : {visibility: "hidden", opacity: 0}}>
-            <FacebookShareButton
-              url={shareUrl}
-              quote={shareQuote}
-            >
-              <FacebookIcon size={36} style={SocialIconStyle} />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={shareUrl}
-              quote={shareQuote}
-            >
-              <TwitterIcon size={36} style={SocialIconStyle} />
-            </TwitterShareButton>
-            <WhatsappShareButton
-              url={shareUrl}
-              quote={shareQuote}
-            >
-              <WhatsappIcon size={36} style={SocialIconStyle} />
-            </WhatsappShareButton>
-            <TelegramShareButton
-              url={shareUrl}
-              quote={shareQuote}
-            >
-              <TelegramIcon size={36} style={SocialIconStyle} />
-            </TelegramShareButton>
+    <div className='Membership'>
+      <div className='membership-header'>
+        <img src={membership.image} alt='Header Membership' />
+      </div>
+      <div class="ribbon ribbon-top-left"><span>oferta</span></div>
+      <div className='membership-body'>
+        <div className='membership-info'>
+          <div className='membership-name'>
+            <h3
+              style={
+                membership.title === 'Full Plan'
+                  ? { color: '#6000de' }
+                  : { color: '#000000' }
+              }>
+              {membership.title}
+              {membership.description && (
+                <AiFillQuestionCircle
+                  style={{
+                    fontSize: 18,
+                    marginLeft: '1ch',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    dispatch(
+                      openTrainingMore({
+                        modal: true,
+                        title: membership.title,
+                        more: membership.description,
+                      })
+                    );
+                  }}
+                />
+              )}
+            </h3>
+            <h4>{membership.subtitle}</h4>
+            <h5>
+              ${membership.price} USD
+              <br />
+              <sup>${membership.price_before}USD</sup>
+            </h5>
           </div>
         </div>
-      </div>
-      <div className="membership-header">
-        <h1>{membership.project}</h1>
-        <span
-          style={{backgroundColor: "#600de"}}
-        >
-          {membership.technology}
-        </span>
-      </div>
-      <div className="membership-information">
-        <div className="membership-user">
-          <div className="membership-user-avatar">
-            <img src={libel} alt="Libel Academy" />
-          </div>
-          <div className="membership-user-name">
-            <h3>Instructores</h3>
-            <h2>{membership.student}</h2>
-          </div>
+
+        <ul className='membership-card-items'>
+          {membership.items.map((e, i) => (
+            <li
+              key={i}
+              style={
+                e.highlight
+                  ? {padding: '4px 8px',fontWeight: 700, backgroundColor: '#6000de88', color: '#fff', borderRadius: '4px'}
+                  : {padding: '4px 8px'}
+              }>
+              <IoCheckmarkCircle
+                style={{ fontSize: 20, marginRight: 20 }}
+              />
+              <span>{e.item}</span>
+              {e.more ? (
+                <AiFillQuestionCircle
+                  className='question-icon'
+                  onClick={() => {
+                    dispatch(
+                      openTrainingMore({
+                        modal: true,
+                        title: e.item,
+                        more: e.more,
+                      })
+                    );
+                  }}
+                />
+              ) : null}
+            </li>
+          ))}
+        </ul>
+        <div className='membership-button'>
+          <a
+            href={membership.urls[0].url}
+            target={'_blank'}
+            rel='noreferrer'
+            className='paypal'>
+            {membership.urls[0].name}
+          </a>
+          <a
+            href={membership.urls[1].url}
+            target={'_blank'}
+            rel='noreferrer'
+            className='card'>
+            {membership.urls[1].name}
+          </a>
+          <div style={{
+            width: '100%',
+            height: 1,
+            backgroundColor: '#000000',
+          }}/>
+          <a
+            href='https://libel.academy/membresia/'
+            target={'_blank'}
+            rel='noreferrer'
+            className='view-membership'>
+            Ver membresía
+          </a>
         </div>
-        <div className="membership-price">
-          <h3 style={{ textDecoration: 'line-through' }}>{membership.priceBefore}USD</h3>
-          <h2>{membership.price}USD</h2>
-        </div>
       </div>
-      <div className="membership-separator"></div>
-      <a href={membership.url} target={"_blank"} rel="noreferrer" className="pay-button">
-        VER MEMBRESÍA
-      </a>
     </div>
   );
 };

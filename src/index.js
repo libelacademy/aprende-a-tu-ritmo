@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Video from "./components/modals/Video";
 import Whatsapp from "./components/modals/Whatsapp";
+import WhatsappMobile from "./components/modals/WhatsappMobile";
 // import InformativeTalks from "./components/modals/InformativeTalks";
 import Training from "./components/modals/Training";
 // import MainModal from "./components/modals/MainModal";
@@ -42,6 +43,7 @@ ReactDOM.render(
             {/* <InformativeTalks /> */}
             <Training />
             <Whatsapp />
+            <WhatsappMobile />
             {/* <MainModal /> */}
             <UpdateBar />
         </Provider>

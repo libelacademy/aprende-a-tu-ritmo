@@ -1,46 +1,98 @@
 /** @format */
 
-import image1 from '../images/memberships/recargada.jpeg';
-import image2 from '../images/memberships/black.jpeg';
-import image3 from '../images/memberships/cartoon.jpeg';
-
-import webpImage1 from '../images/memberships/recargada.jpeg';
-import webpImage2 from '../images/memberships/black.jpeg';
-import webpImage3 from '../images/memberships/cartoon.jpeg';
+import image1 from '../images/memberships/Enmascarar grupo 7.png';
+import image2 from '../images/memberships/Enmascarar grupo 4.png';
 
 const results = [
+  // {
+  //   id: 2,
+  //   technology: '5 Cursos',
+  //   project: 'Personajes Cartoon',
+  //   student: 'Luis Duarte',
+  //   image: image3,
+  //   imageWebp: webpImage3,
+  //   price: 29.99,
+  //   priceBefore: 399,
+  //   url: {
+	// 		paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NCC8XZYDXZAGU',
+	// 		card: 'https://payco.link/1711539',
+	// 	}
+  // },
   {
     id: 0,
-    technology: '41 Cursos',
-    project: 'Membresía Recargada',
-    student: 'Varios',
     image: image1,
-    imageWebp: webpImage1,
-    price: 149,
-    priceBefore: 199,
-    url: 'https://cursos.libel.academy/bundles/membresia-recargada',
+    title: 'MEMBRESÍA',
+    subtitle: 'Libel Año',
+    description: null,
+    price: '89',
+    price_before: '189',
+    items: [
+      {
+        item: 'Acceso a 1 estudiante',
+        more: null,
+      },
+      {
+        item: 'Contenido especializado.',
+        more: null,
+      },
+      {
+        item: 'Acceso un año.',
+        more: null,
+        highlight: true
+      },
+      {
+        item: 'Aprende desde cero.',
+        more: null,
+      },
+    ],
+    urls: [
+      {
+        name: 'Pagar con PayPal',
+        url: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52QRBA7565KW2',
+      },
+      {
+        name: 'Pagar con Tarjeta',
+        url: 'https://payco.link/1711573',
+      },
+    ],
   },
   {
-    id: 1,
-    technology: '23 Cursos',
-    project: 'Membresía Black',
-    student: 'Varios',
+    id: 0,
     image: image2,
-    imageWebp: webpImage2,
-    price: 119,
-    priceBefore: 149,
-    url: 'https://cursos.libel.academy/bundles/membresia-black',
-  },
-  {
-    id: 2,
-    technology: '5 Cursos',
-    project: 'Personajes Cartoon',
-    student: 'Luis Duarte',
-    image: image3,
-    imageWebp: webpImage3,
-    price: 29.99,
-    priceBefore: 399,
-    url: 'https://cursos.libel.academy/bundles/Personajes-cartoon-cc3-iclone7',
+    title: 'MEMBRESÍA',
+    subtitle: 'Libel 6 meses',
+    description: null,
+    price: '59',
+    price_before: '189',
+    items: [
+      {
+        item: 'Acceso a 1 estudiante',
+        more: null,
+      },
+      {
+        item: 'Contenido especializado.',
+        more: null,
+      },
+      {
+        item: 'Acceso a 6 meses.',
+        more: null,
+        highlight: true
+      },
+      {
+        item: 'Aprende desde cero.',
+        more: null,
+      },
+    ],
+    urls: [
+      {
+        name: 'Pagar con PayPal',
+        url: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QGL8SD6UAMCEW',
+      },
+      {
+        name: 'Pagar con Tarjeta',
+        url: 'https://payco.link/1711577',
+      },
+    ],
   },
 ];
 

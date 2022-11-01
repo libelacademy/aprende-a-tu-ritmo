@@ -87,6 +87,7 @@ const Result = ({ result }) => {
 						marginLeft: 10,
 						padding: '4px 8px',
 						borderRadius: 5,
+						textAlign: 'center'
 					}}>
 					{result.technology}
 				</span>
@@ -110,14 +111,14 @@ const Result = ({ result }) => {
 			</div>
 			<div className='result-separator'></div>
 			<a
-				href={result.url}
+				href={result.url.paypal}
 				target={'_blank'}
 				rel='noreferrer'
 				className='pay-button'>
 				Pagar con PayPal
 			</a>
 			<a
-				href={result.url}
+				href={result.url.card}
 				target={'_blank'}
 				rel='noreferrer'
 				className='pay-button'>

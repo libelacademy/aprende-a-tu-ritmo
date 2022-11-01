@@ -3,7 +3,7 @@ import "../../css/modals/Whatsapp.css";
 
 import { IoLogoWhatsapp, IoCloseSharp } from "react-icons/io5";
 import avatar1 from "../../images/avatar1.png"
-import avatar2 from "../../images/avatar2.png";
+// import avatar2 from "../../images/avatar2.png";
 
 
 const MemberTag = ({ name, dependency, avatar, url }) => {
@@ -54,14 +54,14 @@ const Whatsapp = () => {
                         name={"Ayuda 24/7"}
                         dependency={"Libel Academy"}
                         avatar={avatar1}
-                        url="https://api.whatsapp.com/send?phone=573219325781"
+                        url="https://wa.link/evitcw"
                     />
-                    <MemberTag
+                    {/* <MemberTag
                         name={"Administrativo"}
                         dependency={"Registro y control"}
                         avatar={avatar2}
                         url="https://wa.link/zbatnw"
-                    />
+                    /> */}
                 </div>
             </div>
         </button>
