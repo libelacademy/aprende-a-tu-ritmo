@@ -20,7 +20,7 @@ const Memberships = () => {
                         MEMBRESÍAS
                     </span>
                 </h1>
-                <h2 style={{color: "white", marginTop: -40, marginBottom: 40}}>Lleva mas, paga menos</h2>
+                <h2 style={{color: "white", marginTop: -40, marginBottom: 40}}>Lleva más, paga menos</h2>
                 <div className="results-content">
                     {memberships
                         .map((result, index) => (
